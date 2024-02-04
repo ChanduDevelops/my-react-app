@@ -25,7 +25,7 @@ const App = () => {
         degree={degree}
       >
       </div>
-      <Box name={name} age={age} height={height} degree={degree}/>
+      <Box name={name} age={age} height={height} degree={degree} />
     </>
   )
 }
