@@ -3,18 +3,17 @@ import ReactDOM from 'react-dom/client'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 
-const Box = () => {
+const Box = (props) => (
   <>
-    <div className='box'>
-      <h1>Hello</h1>
-    </div>
+      <h1>{props.age}</h1>
   </>
-}
+)
 
-const App = () => {
+const App = (props) => {
   return (
     <>
-      <Box />
+      <h1>{props.name}</h1>
+      <Box {...props}/>
     </>
   )
 }
