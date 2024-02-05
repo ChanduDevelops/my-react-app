@@ -1,0 +1,46 @@
+.box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    aspect-ratio: 1/1;
+    background: #282c34;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.box h1 {
+    color: #fff;
+    font-size: 8em;
+    z-index: 2;
+}
+
+.box::before {
+    content: '';
+    position: absolute;
+    height: 140%;
+    width: 50%;
+    background: linear-gradient(#0088ff, red);
+    animation: rotate 4s linear infinite;
+}
+
+.box::after {
+    content: '';
+    position: absolute;
+    background: #282c34;
+    border-radius: 50%;
+    inset: 10px;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
